@@ -1,0 +1,28 @@
+package euler;
+public class Euler {
+
+    public static void main(String[] args) {
+        fib(100);
+    }
+    static void fib(int x){
+        int arr[]=new int[x];
+        int a=1;
+        int b=2;
+        for(int j=0;j<x;j++){
+            if(a<4000000){
+            arr[j]=a;
+            int temp=a+b;
+            a=b;
+            b=temp;
+        }
+        }
+        int s=0;
+        for(int j=0;j<x;j++){
+            
+            if(arr[j]%2==0){
+                s+=arr[j];
+            }
+        }
+        System.out.println(s);
+    }
+ }
