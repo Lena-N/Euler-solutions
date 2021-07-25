@@ -1,0 +1,33 @@
+package euler;
+import java.math.*;
+import java.util.ArrayList;
+
+public class Euler {
+
+    public static void main(String[] args) {
+        
+        prime(600851475143L);
+    }
+    static void prime(double x){
+        double y=Math.sqrt(x);
+        ArrayList arr=new ArrayList((int)(y));
+        //int arr[]=new int[x/2];
+        for(int i=1;i<=y;i++){
+            if(x%i==0&&i%2!=0){
+                arr.add(i);
+                //System.out.println(i);
+            }
+        }
+        double mul=1L;
+        for(int i=0;i<=arr.size();i++){
+            if(mul!=x){
+                mul*=(int)arr.get(i);
+            }
+            else if(mul==x){
+               System.out.println(arr.get(i-1));
+               break;
+            }
+        }
+    }
+        
+ }
