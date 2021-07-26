@@ -1,0 +1,32 @@
+package euler;
+
+public class Euler {
+
+    public static void main(String[] args) {
+        int num=3;
+        int prime=1;
+       while(num>2){
+          if(prime(num)){
+              prime++;
+              //System.out.println(num);
+             
+          }
+           if(prime==10001){
+                  System.out.println(num);
+                  break;
+              }
+           num++;
+       }
+    }
+    static boolean prime(int num){
+        for(int i=2;i<num;i++){
+            if (num%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    
+        
+ }
